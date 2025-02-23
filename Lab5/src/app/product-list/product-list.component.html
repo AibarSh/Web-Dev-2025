@@ -1,0 +1,10 @@
+<div class="list">
+    <p class="categ"> Categories: </p>
+    <button (click)="filterProducts('All')" class="comp">Show all</button>
+    <button (click)="filterProducts('Electronics')" class="comp">Electronics</button>
+    <button (click)="filterProducts('Pharmacy')" class="comp">Pharmacy</button>
+    <button (click)="filterProducts('Clothes')" class="comp">Clothes</button>
+    <button (click)="filterProducts('Books')" class="comp">Books</button>
+  </div>
+  
+  <app-product-item [category]="selectedCategory"></app-product-item>

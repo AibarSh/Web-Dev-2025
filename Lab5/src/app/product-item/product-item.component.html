@@ -1,0 +1,14 @@
+<div class="products-container">
+  <div *ngFor="let product of filteredProducts" class="product-card">
+    <img [src]="product.image" alt="{{ product.name }}">
+    <h2>{{ product.name }}</h2>
+    <p>{{ product.description }}</p>
+    <p>Rating: ⭐ {{ product.rating }}</p>
+    <a [href]="product.link" target="_blank">View on Kaspi.kz</a>
+    <button (click)="TelegramShare(product.link)">Share on Telegram</button>
+    <button (click)="likeProduct(product)">
+      {{ product.isLiked ? 'Unlike' : 'Like' }}
+    </button>
+    <p>Likes: {{ product.likes || 0 }}</p>
+  </div>
+</div>
