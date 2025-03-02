@@ -1,0 +1,54 @@
+nav {
+    background-color: purple;
+    overflow: hidden;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+  
+  .nav-button {
+    background-color: yellow;
+    color: purple;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .nav-button:hover {
+    background-color: pink;
+  }
+  
+  .nav-button.active {
+    background-color: rgb(65, 2, 65);
+    color: white;
+  }
+  
+ 
+  router-outlet {
+    display: block;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+  }
+
+footer{
+    background-color: purple;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    position: static;
+}
