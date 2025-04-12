@@ -1,0 +1,22 @@
+<div class="company-details">
+    <h2>Company vacancies details</h2>
+
+
+    <div *ngIf="loading" class="loading-state">
+        <p>Loading vacancies...</p>
+    </div>
+
+
+    <div *ngIf="!loading && (!vacancies || vacancies.length === 0)" class="no-vacancies">
+        <p>No vacancies available for this company.</p>
+    </div>
+
+ 
+    <div *ngIf="!loading && vacancies && vacancies.length > 0">
+        <div *ngFor="let vacancy of vacancies" class="vacancy-item">
+            <h3>{{ vacancy.name }}</h3>
+            <p><strong>Details:</strong> {{ vacancy.description }}</p>
+            <p><strong>Salary:</strong> {{ vacancy.salary | number }} tg</p>
+        </div>
+    </div>
+</div>
